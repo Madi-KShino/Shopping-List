@@ -8,13 +8,25 @@
 
 import UIKit
 
-class ListTableViewController: UITableViewController {
-
+class ListTableViewController: UITableViewController, AddItemAlertDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        ListController.sharedInstance.fetchedResultsController.delegate = self
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        ListController.sharedInstance.loadView()
+    }
+    
+    //MARK: - ACTIONS
+    @IBAction func addButtonTapped(_ sender: Any) {
+        addNewItemAlert()
+        tableView.reloadData()
+        loadView()
+    }
+    
     // MARK: - TABLE VIEW DATA
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ListController.sharedInstance.fetchedResultsController.fetchedObjects?.count ?? 0
@@ -36,4 +48,24 @@ class ListTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    
+    //MARK: - PROTOCOL CONFORMATION
+    func addNewItemAlert() {
+        let alertController = UIAlertController(title: "Shopping List", message: "Add an item to the list!", preferredStyle: .alert)
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "🥚 🥦 🧂"
+            textField.keyboardType = .default
+        }
+        
+        let addAction = UIAlertAction(title: "Add", style: .default, handler: nil)
+        alertController.addAction(addAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
+
+

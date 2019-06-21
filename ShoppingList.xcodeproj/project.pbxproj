@@ -16,6 +16,7 @@
 		536BF32122BD2DCD00CD1E38 /* List+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536BF32022BD2DCD00CD1E38 /* List+Convenience.swift */; };
 		536BF32422BD2EF800CD1E38 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536BF32322BD2EF800CD1E38 /* ListController.swift */; };
 		536BF32722BD320900CD1E38 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536BF32622BD320900CD1E38 /* ListTableViewController.swift */; };
+		536BF32922BD430000CD1E38 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536BF32822BD430000CD1E38 /* ItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		536BF32022BD2DCD00CD1E38 /* List+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Convenience.swift"; sourceTree = "<group>"; };
 		536BF32322BD2EF800CD1E38 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		536BF32622BD320900CD1E38 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		536BF32822BD430000CD1E38 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				536BF32622BD320900CD1E38 /* ListTableViewController.swift */,
+				536BF32822BD430000CD1E38 /* ItemTableViewCell.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				536BF32122BD2DCD00CD1E38 /* List+Convenience.swift in Sources */,
 				536BF32722BD320900CD1E38 /* ListTableViewController.swift in Sources */,
 				536BF30F22BD295700CD1E38 /* ShoppingList.xcdatamodeld in Sources */,
+				536BF32922BD430000CD1E38 /* ItemTableViewCell.swift in Sources */,
 				536BF30722BD295700CD1E38 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
