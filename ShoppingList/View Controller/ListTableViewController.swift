@@ -37,6 +37,7 @@ class ListTableViewController: UITableViewController, AddItemAlertDelegate {
         guard let itemDisplayed = ListController.sharedInstance.fetchedResultsController.fetchedObjects?[indexPath.row]
             else { return UITableViewCell() }
         cell.textLabel?.text = itemDisplayed.item
+        
         return cell
     }
 
@@ -51,21 +52,20 @@ class ListTableViewController: UITableViewController, AddItemAlertDelegate {
     
     //MARK: - PROTOCOL CONFORMATION
     func addNewItemAlert() {
-        let alertController = UIAlertController(title: "Shopping List", message: "Add an item to the list!", preferredStyle: .alert)
-        
+        let alertController = UIAlertController(title: "New Item", message: "Add an item to the shopping list!", preferredStyle: .alert)
         alertController.addTextField { (textField) in
-            textField.placeholder = "🥚 🥦 🧂"
+            textField.placeholder = "🥚 🥦 🧂. . ."
             textField.keyboardType = .default
         }
-        
-        let addAction = UIAlertAction(title: "Add", style: .default, handler: nil)
+        let addAction = UIAlertAction(title: "Add", style: .default) { (_) in
+            guard let item = alertController.textFields?.first?.text
+                else { return }
+            ListController.sharedInstance.addItem(item: item)
+            ListController.sharedInstance.loadView()
+        }
         alertController.addAction(addAction)
-        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
-        
         self.present(alertController, animated: true, completion: nil)
     }
 }
-
-

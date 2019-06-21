@@ -20,7 +20,7 @@ class ItemTableViewCell: UITableViewCell {
     //MARK: - ACTIONS
     @IBAction func checkButtonTapped(_ sender: Any) {
         cellDelegate?.cellButtonTapped(self)
-//        ListController.sharedInstance.toggleWasBoughtFor(item: <#T##ShoppingList#>)
+        
     }
     
     //MARK: FUNCTIONS
