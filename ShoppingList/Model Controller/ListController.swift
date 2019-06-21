@@ -29,12 +29,6 @@ class ListController {
         loadView()
     }
     
-    func editItem(listItem: ShoppingList, item: String) {
-        listItem.item = item
-        saveToPersistentStore()
-        loadView()
-    }
-    
     func toggleWasBoughtFor(item: ShoppingList) {
         item.wasBought = !item.wasBought
         saveToPersistentStore()

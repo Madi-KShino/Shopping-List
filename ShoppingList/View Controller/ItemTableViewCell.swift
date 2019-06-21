@@ -18,9 +18,9 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet weak var checkButton: UIButton!
     
     //MARK: - ACTIONS
-    @IBAction func checkButtonTapped(_ sender: Any) {
+    @IBAction func checkButtonTapped(for item: ShoppingList) {
+        item.wasBought = !item.wasBought
         cellDelegate?.cellButtonTapped(self)
-        
     }
     
     //MARK: FUNCTIONS
