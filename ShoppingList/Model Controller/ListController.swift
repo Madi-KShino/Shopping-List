@@ -13,13 +13,7 @@ class ListController {
     
     //MARK: - SINGLETON & SOURCE OF TRUTH
     static let sharedInstance = ListController()
-    
-//    var fetchedResultsController
-    
-    init() {
-        
-    }
-    
+
     //MARK: - EDITING FUNCTIONS
     func addItem(item: String) {
         ShoppingList(item: item, wasBought: false)
@@ -47,6 +41,20 @@ class ListController {
             try CoreDataStack.managedObjectContext.save()
         } catch {
             print("Error Saving to Persistent Store", error.localizedDescription)
+        }
+    }
+    
+    var fetchedResultsController: NSFetchedResultsController<ShoppingList>
+    
+    init() {
+        let request: NSFetchRequest<ShoppingList> = ShoppingList.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "wasBought", ascending: false)]
+        let resultsController: NSFetchedResultsController<ShoppingList> = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataStack.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = resultsController
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            print("Error performing the fetch request")
         }
     }
 }

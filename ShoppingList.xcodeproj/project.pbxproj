@@ -15,6 +15,7 @@
 		536BF31F22BD2DB600CD1E38 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536BF31E22BD2DB600CD1E38 /* CoreDataStack.swift */; };
 		536BF32122BD2DCD00CD1E38 /* List+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536BF32022BD2DCD00CD1E38 /* List+Convenience.swift */; };
 		536BF32422BD2EF800CD1E38 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536BF32322BD2EF800CD1E38 /* ListController.swift */; };
+		536BF32722BD320900CD1E38 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536BF32622BD320900CD1E38 /* ListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		536BF31E22BD2DB600CD1E38 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		536BF32022BD2DCD00CD1E38 /* List+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Convenience.swift"; sourceTree = "<group>"; };
 		536BF32322BD2EF800CD1E38 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		536BF32622BD320900CD1E38 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				536BF31C22BD2CFE00CD1E38 /* View */,
 				536BF31D22BD2D0500CD1E38 /* Model */,
 				536BF32222BD2EE100CD1E38 /* Model Controller */,
+				536BF32522BD31F300CD1E38 /* View Controller */,
 				536BF31B22BD296B00CD1E38 /* Resources */,
 			);
 			path = ShoppingList;
@@ -103,6 +106,14 @@
 				536BF32322BD2EF800CD1E38 /* ListController.swift */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		536BF32522BD31F300CD1E38 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				536BF32622BD320900CD1E38 /* ListTableViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				536BF31F22BD2DB600CD1E38 /* CoreDataStack.swift in Sources */,
 				536BF32422BD2EF800CD1E38 /* ListController.swift in Sources */,
 				536BF32122BD2DCD00CD1E38 /* List+Convenience.swift in Sources */,
+				536BF32722BD320900CD1E38 /* ListTableViewController.swift in Sources */,
 				536BF30F22BD295700CD1E38 /* ShoppingList.xcdatamodeld in Sources */,
 				536BF30722BD295700CD1E38 /* AppDelegate.swift in Sources */,
 			);
